@@ -1,4 +1,4 @@
-
+library(plyr)
 #0.read dataset
 features <- read.table("features.txt")
 activities <- read.table("activity_labels.txt")
@@ -34,6 +34,6 @@ final_merged_label<-c("subject", "activity", sub_label)
 colnames(alldata)<-final_merged_label
 
 # 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject. 
-averages_data <- ddply(alldata, .(subject, activity), function(x) colMeans(x[, 3:81]))
-write.table(averages_data, "averages_data.txt", row.name=FALSE)
+tidydata <- ddply(alldata, .(subject, activity), function(x) colMeans(x[, 3:81]))
+write.table(tidydata, "tidydata.txt", row.name=FALSE)
 
