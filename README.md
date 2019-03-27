@@ -1,4 +1,4 @@
-# coursera-getting-and-cleaning-data-project
+# Data_Cleaning_Coursera
  You should create one R script called run_analysis.R that does the following. 
 1.Merges the training and the test sets to create one data set.
 2.Extracts only the measurements on the mean and standard deviation for each measurement. 
